@@ -2,6 +2,7 @@ backend:
   name: github
   repo: gitsome/netlify-cms-demo
   branch: master
+  base_url: https://netlify-cms-demo.herokuapp.com
 publish_mode: editorial_workflow
 media_folder: "images/uploads"
 collections:
