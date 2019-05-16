@@ -1,0 +1,26 @@
+backend:
+  name: github
+  repo: gitsome/netlify-cms-demo
+  branch: master
+publish_mode: editorial_workflow
+media_folder: "images/uploads"
+collections:
+  - name: "page" # Used in routes, e.g., /admin/collections/blog
+    label: "Page" # Used in the UI
+    folder: "_posts/pages" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "book" # Used in routes, e.g., /admin/collections/blog
+    label: "Book" # Used in the UI
+    folder: "_posts/books" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Table Of Contents", name: "toc", widget: "markdown"}
