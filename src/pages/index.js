@@ -11,11 +11,13 @@ const IndexPage = ({
 
     const Posts = edges.map(edge => {
 
+        edge.node.frontmatter.thumbnail = edge.node.frontmatter.thumbnail.replace("/public", "");
+
         return (
             <div className="demo-page">
                 <h3>{edge.node.frontmatter.title}</h3>
                 <div dangerouslySetInnerHTML={{__html:edge.node.excerpt}}></div>
-                <img width={200} alt="awesome" src={edge.node.frontmatter.thumbnail}/>
+                <img alt="awesome" src={edge.node.frontmatter.thumbnail}/>
             </div>
         );
     });
