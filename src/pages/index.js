@@ -13,7 +13,7 @@ const IndexPage = ({
 
         return (
             <div className="demo-page">
-                <h3>{edge.node.frontmatter.title}{JSON.stringify(edge, null, 2)}</h3>
+                <h3>{edge.node.frontmatter.title}</h3>
                 <div dangerouslySetInnerHTML={{__html:edge.node.excerpt}}></div>
                 <img width={200} alt="awesome" src={edge.node.frontmatter.thumbnail}/>
             </div>
@@ -25,7 +25,6 @@ const IndexPage = ({
             <h2>Pages</h2>
             <div>{Posts}</div>
         </div>
-
     );
 }
 

@@ -42,7 +42,12 @@ module.exports = {
         gfm: true,
         // Plugins configs
         plugins: [
-          `gatsby-remark-relative-images`,
+          {
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              name: "images"
+            }
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {},
